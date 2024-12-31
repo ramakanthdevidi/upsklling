@@ -1,0 +1,34 @@
+export P4PORT=ssl:10.63.20.56:1666
+export P4USER=super
+export P4CLIENT=mydocker1
+p4 client -o dockerfile123 > client_spec.txt
+
+
+ 
+
+
+p4sync charset: 'none', credential: '7e8c96a7-0788-4dd4-a58c-2a47ba59608c', populate: autoClean(delete: true, modtime: false, parallel: [enable: false, minbytes: '1024', minfiles: '1', threads: '4'], pin: '', quiet: true, replace: true, tidy: false), source: depotSource('')
+
+
+ p4 print //depot/docker/dockerfile.txt > dockerfile
+
+
+export P4PORT=perforce-server:1666
+export P4USER=your-username
+export P4PASSWD=your-password
+export P4CLIENT=your-client
+
+//depot/docker/dockerfile2.txt
+
+
+Client: myubuntu-client
+
+Root: /home/ubuntu
+
+View:
+    //depot/docker/dockerfile1.txt //myubuntu-client/docker/dockerfile1.txt
+Host: ip-10-63-20-56
+
+
+
+p4 sync //depot/docker/dockerfile2.txt

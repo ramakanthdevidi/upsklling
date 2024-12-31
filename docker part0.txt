@@ -1,0 +1,22 @@
+ 
+
+What is Docker?
+Docker is an open-source containerization platform by which you can pack your application and all its dependencies into a standardized unit called a container. Containers are light in weight which makes them portable and they are isolated from the underlying infrastructure and from each other container. You can run the docker image as a docker container in any machine where docker is installed without depending on the operating system.
+
+
+What is Docker? 
+Docker is a set of Platforms as a service (PaaS) products that use Operating system-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries, and configuration files; they can communicate with each other through well-defined channels. All containers are run by a single operating system kernel and therefore use fewer resources than a virtual machine.
+
+Docker Networking:
+
+
+how one container communicate with other
+
+
+in docker we have three types networking 
+
+1.Bridge:it is a default driver when running single containers, here we can run so many containers just by changing the port 
+2.Host:when using the host driver, the containers shares the network stack of the docker host here only one will run it used direct host ip to 
+3.None:The none driver simply disables networking for a containers , making it isolated form other containers.
+
+docker network ls: to see docker networks

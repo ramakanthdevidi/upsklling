@@ -1,0 +1,143 @@
+What is a Terraform
+*Terraform is an infrastructure as code (iac) tool that allows you to build, change, and version infrastructure safely and efficiently.
+
+*performing dry run is very easy and very verbose.
+
+syntax for resource creation 
+
+resource "resource_type" "resourcename"{
+cidr_block = "10.----"
+tags = {
+Name = "resourcename"
+}
+}
+
+
+* if we create any resource in Aws using terraform if we go and change it manually then if we use terraform plan we can see what all changed and by using terraform apply --auto-approve we can override that changes means we can remove the changes.
+
+and if want to remove the created infra or resource we can use (terraform destroy)
+
+* terraform state list : it show the resource that we have created.
+
+* terraform state rm resource_name: it will remove the resource form terraform configuration no longer terraform is required to manange after using this we can not manage the resource with terraform it will not remove form aws but form terraform config it will remove .
+
+*if we want to delete a resource individually we can delete by using the command : terraform destroy -target resourcename
+
+*if we have given the wrong name for resource if we want to change the name of it with out destroying the resource we can use :terraform state mv aws_instance.sourcename aws_instance.destinationname 
+
+
+terraform datasources: in terraform we have two options when it comes to resources one is resources whre you have created using terrasform second one is data sources  when you can import the resources which not known to terraform.
+
+
+Terraform functions:
+
+count
+element
+ 
+
+
+* what is the difference bet variable.tf and terraform.tfvars
+
+
+
+
+variables in Terraform:
+1.input variable
+2)output variable
+
+we have different files for our understanding
+1) Provider.tf
+2) input.tf
+3) output.tf
+4) main.tf
+5) terraform.tvar
+
+by default we have the name as terraform.tvar but we can change the name to anyone as,
+
+terraform init
+terraform plan
+terraform apply
+
+What is terraform:
+
+Terraform is an infrastructure as code (iac) tool allows you to build,change, and version infrastructure safely and efficiently.
+
+Components of Terraform:
+
+1.Providers
+2.Resources
+3.Variables
+4.Statefile
+5.Provisioners
+6.Backends
+7.Modules
+8.Data Sources
+9.Service Principals
+
+
+
+1.PROVIDERS :
+Terraform relies on pulgins called "Providers" to interact with cloud providers, saas providers, and other APIs.
+it is an interaction component for terraform application and infra service
+
+
+2.RESOURCES : Resources are the most important element in the Terraform language. Each resources block block describes one or more infrastructure objects, such as virtual networks, compute instances, or higher-level components such as DNS records.
+
+
+Variables:
+
+Using variables in terraform configurations makes our deployment more dynamic.
+
+
+Statefile:
+
+After the deployment is finished terraform creates a state file to  keep track of current state of the infrastructure.
+a file name with terraform.tfstate will be created in our working directory.
+
+PROVISIONORS:
+
+similar to configuration management tool like ansible.
+
+
+
+Service principal:
+
+it is nothing but for connecting terraform with azure portal
+
+AD->apprigistration
+ 
+
+
+
+to search anything in google type azurerm what you want .
+
+
+we have to give Permissiions to subscription add the service privilages in it
+
+
+
+What is terraform backend:
+
+its nothing but adding Statefile in cloud storage.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
